@@ -1,0 +1,70 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Tue Aug 15 22:58:26 2023
+
+LISTING FOR SIMULATION FILE: SOUNDX_GAL20.si
+
+   1: /* SoundX Simulation Input
+   2:  * Copyright 2023 SukkoPera <software@sukkology.net>
+   3:  *
+   4:  * This program is free software: you can redistribute it and/or modify
+   5:  * it under the terms of the GNU General Public License as published by
+   6:  * the Free Software Foundation, either version 3 of the License, or
+   7:  * (at your option) any later version.
+   8:  *
+   9:  * This program is distributed in the hope that it will be useful,
+  10:  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  11:  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  12:  * GNU General Public License for more details.
+  13:  *
+  14:  * You should have received a copy of the GNU General Public License
+  15:  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  16:  */
+  17: 
+  18: Name     SoundX_GAL20;
+  19: PartNo   TBD;
+  20: Date     15/08/2023;
+  21: Revision 01;
+  22: Designer SukkoPera;
+  23: Company  OpenRetroWorks;
+  24: Assembly None;
+  25: Location Italy;
+  26: Device   g20v8ma;
+  27: 
+  28: FIELD addr = [a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0];
+  29:
+  30: ORDER: addr, phi2, rw,   ym_cs, ym_rd, ym_a0;
+  31: 
+
+==============================
+                        yyy   
+                      p mmm   
+                      h ___   
+                      ircra   
+            addr      2wsd0   
+==============================
+0001: 000000000000000000HHL
+0002: 000000000000000001HHL
+0003: 000000000000000010HHL
+0004: 000000000000000011HHL
+0005: 111111011110000000HHL
+0006: 111111011110000001HHL
+0007: 111111011110000010HHL
+0008: 111111011110000011HHL
+0009: 111111011110000100HHL
+0010: 111111011110000101HHL
+0011: 111111011110000110HHL
+0012: 111111011110000111HHL
+0013: 111111011110001000HHL
+0014: 111111011110001000HHL
+0015: 111111011110001010LHL
+0016: 111111011110001011HHL
+0017: 111111011110001100HHL
+0018: 111111011110001100HHL
+0019: 111111011110001110LHH
+0020: 111111011110001111HHL
+0021: 111111011110010000HHL
+0022: 111111011110010000HHL
+0023: 111111011110010010HHL
+0024: 111111011110010011LLL

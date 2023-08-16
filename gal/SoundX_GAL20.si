@@ -1,0 +1,63 @@
+/* SoundX Simulation Input
+ * Copyright 2023 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+Name     SoundX_GAL20;
+PartNo   TBD;
+Date     15/08/2023;
+Revision 01;
+Designer SukkoPera;
+Company  OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device   g20v8ma;
+
+ORDER: addr, phi2, rw,   ym_cs, ym_rd, ym_a0;
+
+VECTORS:
+/* Other addresses */
+'0000' 0 0 HH*
+'0000' 0 1 HH*
+'0000' 1 0 HH*
+'0000' 1 1 HH*
+
+'FDE0' 0 0 HH*
+'FDE0' 0 1 HH*
+'FDE0' 1 0 HH*
+'FDE0' 1 1 HH*
+
+'FDE1' 0 0 HH*
+'FDE1' 0 1 HH*
+'FDE1' 1 0 HH*
+'FDE1' 1 1 HH*
+
+/* Write address */
+'FDE2' 0 0 HH*
+'FDE2' 0 0 HH*
+'FDE2' 1 0 LHL
+'FDE2' 1 1 HH*
+
+/* Write address */
+'FDE3' 0 0 HH*
+'FDE3' 0 0 HH*
+'FDE3' 1 0 LHH
+'FDE3' 1 1 HH*
+
+/* Write address */
+'FDE4' 0 0 HH*
+'FDE4' 0 0 HH*
+'FDE4' 1 0 HH*
+'FDE4' 1 1 LLL
