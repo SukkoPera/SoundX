@@ -1139,12 +1139,6 @@ Wire Wire Line
 	11280 6665 11280 6370
 Wire Wire Line
 	11280 6370 11200 6370
-Wire Wire Line
-	11280 6370 11525 6370
-Wire Wire Line
-	11525 6370 11525 6455
-Wire Wire Line
-	11525 6455 11665 6455
 Connection ~ 11280 6370
 Wire Wire Line
 	11280 6370 11280 6075
@@ -1173,7 +1167,7 @@ Wire Wire Line
 	10795 6075 9945 6075
 Text Notes 10430 6995 0    50   ~ 0
 15 KHz LOW-PASS FILTER
-Text Notes 11785 6855 0    50   ~ 0
+Text Notes 11770 6995 0    50   ~ 0
 AMPLIFIER
 Text Label 7845 5195 2    50   ~ 0
 dac_sync
@@ -2131,18 +2125,6 @@ F 3 "" H 5560 9975 50  0001 C CNN
 	1    5560 9975
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	5505 5895 5505 6595
-Wire Bus Line
-	14765 2285 14765 3725
-Wire Bus Line
-	7945 5795 7945 6595
-Wire Bus Line
-	1005 2565 1005 3265
-Wire Bus Line
-	9545 1985 9545 2685
-Wire Bus Line
-	12565 1780 12565 3725
 $Comp
 L Device:CP1 C?
 U 1 1 65AC9FB0
@@ -2156,4 +2138,45 @@ F 3 "~" H 5560 10250 50  0001 C CNN
 	1    5560 10250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Jumper:Jumper_3_Open JP5
+U 1 1 65B030FE
+P 11420 6455
+F 0 "JP5" V 11130 6300 50  0000 L CNN
+F 1 "JMP_FILTER_BYPASS" V 11050 6030 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 11420 6455 50  0001 C CNN
+F 3 "~" H 11420 6455 50  0001 C CNN
+	1    11420 6455
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11570 6455 11665 6455
+Wire Wire Line
+	11280 6370 11340 6370
+Wire Wire Line
+	11340 6370 11340 6765
+Wire Wire Line
+	11340 6765 11420 6765
+Wire Wire Line
+	11420 6765 11420 6705
+Wire Wire Line
+	11420 6205 11420 5950
+Wire Wire Line
+	9415 5950 9415 6270
+Wire Wire Line
+	9415 5950 11420 5950
+Wire Bus Line
+	5505 5895 5505 6595
+Wire Bus Line
+	14765 2285 14765 3725
+Wire Bus Line
+	7945 5795 7945 6595
+Wire Bus Line
+	1005 2565 1005 3265
+Wire Bus Line
+	9545 1985 9545 2685
+Wire Bus Line
+	12565 1780 12565 3725
+Text Label 11665 6455 2    50   ~ 0
+amp_in
 $EndSCHEMATC
