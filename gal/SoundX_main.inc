@@ -37,7 +37,7 @@ Pin 13 = phi2;
 Pin 23 = rw;
 
 /* Outputs */
-Pin 15 = kbd_cs;
+Pin 15 = midi_cs;
 Pin 20 = ym_cs;
 Pin 21 = ym_rd;
 Pin 22 = ym_a0;
@@ -49,7 +49,8 @@ Field addr = [a15..0];
 
 /** Logic Equations **/
 
-/* Logic implemented on the original C64 Sound Expander, uses 3 registers:
+/* The logic implemented on the original C64 Sound Expander uses 3 registers:
+ * 
  *      R/W A5 A4 /IO2 PHI2 | /CS /RD /WR A0 FUNCTION
  * DF40 0/W 0  0  0    0    | 1   1   0   0  Hi-Z
  * DF40 0/W 0  0  0    1    | 0   1   0   0  Write Address
@@ -64,21 +65,34 @@ Field addr = [a15..0];
  * DF60 1/R 1  0  0    0    | 1   0   1   0  Hi-Z
  * DF60 1/R 1  0  0    1    | 0   0   1   0  Status Read
  * 
- * All we do is use different addresses:
- * - $DF40 -> $FDE2
- * - $DF50 -> $FDE3
- * - $DF60 -> $FDE4
  * 
- * And we can also use $FDE5 for reading the keyboard, if any
+ * But first of all we must used a different address. We have MIDI I/O onboard and we can map that to $FDE0/1: those are
+ * reserved for MIDI in Solder's I/O map and even though I have never seen his MIDI interface, I have a strong suspicion
+ * that it works exactly the same as ours, which is a good enough reason to use the same addresses. Then, in the sake of
+ * consistency, we can just use the subsequent addresses for the OPL registers. If we wanted to do the same as the Sound
+ * Expander we would need 3 addresses, which would bring the total to 5. It would be much better if we could reduce that
+ * to 4 in order not to pollute the address space, so let's go AdLib-style! Instead of using a dedicated address for the
+ * status register, which is read-only, we map that to the address of the address latch (which is write-only). We also
+ * map that to the data latch, which is not strictly AdLib-style, but well, we need to do something. We can always
+ * change that later on, that's why we use a GAL for address decoding :). So, all in all:
+ * 
+ *      R/W A1 A0 PHI2 | /CS /RD /WR A0 FUNCTION
+ * FDE2 x   1  0  0    | 1   x   x   x  Hi-Z
+ * FDE2 0/W 1  0  1    | 0   1   0   0  Write Address
+ * FDE2 1/R 1  0  1    | 0   0   1   0  Status Read
+ * FDE3 x   1  1  0    | 1   x   x   x  Hi-Z
+ * FDE3 0/W 1  1  1    | 0   1   0   1  Write Data
+ * FDE3 1/R 1  1  1    | 0   0   1   0  Status Read
  */
 
 addressed = phi2 & addr:'b'1111110111100xxx;	// $FDE0-$FDE7
-wrAddress = addressed & !rw & !a2 & a1 & !a0;	// $FDE2
-wrData = addressed & !rw & !a2 & a1 & a0;		// $FDE3
-rdStatus = addressed & rw & a2 & !a1 & !a0;		// $FDE4
-kbdRead = addressed & rw & a2 & !a1 & a0;		// $FDE5
+wrAddress = addressed & !rw & !a2 & a1 & !a0;	// $FDE2 Write
+rdStatus1 = addressed & rw & !a2 & a1 & !a0;	// $FDE2 Read
+wrData = addressed & !rw & !a2 & a1 & a0;		// $FDE3 Write
+rdStatus2 = addressed & rw & !a2 & a1 & a0;		// $FDE3 Read
+kbdRead = addressed & a2 & !a1 & a0;			// $FDE5
 
-ym_cs = !(wrAddress # wrData # rdStatus);
-ym_rd = !rdStatus;
+ym_cs = !(wrAddress # wrData # rdStatus1 # rdStatus2);
+ym_rd = !(rdStatus1 # rdStatus2);
 ym_a0 = wrData;
-kbd_cs = !kbdRead;
+midi_cs = !kbdRead;

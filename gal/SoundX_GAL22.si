@@ -46,18 +46,16 @@ VECTORS:
 
 /* Write address */
 'FDE2' 0 0 HH*
-'FDE2' 0 0 HH*
+'FDE2' 0 1 HH*
 'FDE2' 1 0 LHL
-'FDE2' 1 1 HH*
 
-/* Write address */
+/* Read status (1) */
+'FDE2' 1 1 LLL
+
+/* Write data */
 'FDE3' 0 0 HH*
-'FDE3' 0 0 HH*
+'FDE3' 0 1 HH*
 'FDE3' 1 0 LHH
-'FDE3' 1 1 HH*
 
-/* Write address */
-'FDE4' 0 0 HH*
-'FDE4' 0 0 HH*
-'FDE4' 1 0 HH*
-'FDE4' 1 1 LLL
+/* Read status (2) */
+'FDE3' 1 1 LLL
