@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/SoundX/SoundX.sch)
-    (date "Thu 17 Aug 2023 21:17:25 CEST")
+    (date "Thu 17 Aug 2023 21:30:18 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -40,6 +40,7 @@
       (tstamp 65838344))
     (comp (ref V1)
       (value LOGO)
+      (footprint SoundX:logo)
       (fields
         (field (name MouserPN) -))
       (libsource (lib void) (part Void) (description ""))
