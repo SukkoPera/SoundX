@@ -85,14 +85,24 @@ Field addr = [a15..0];
  * FDE3 1/R 1  1  1    | 0   0   1   0  Status Read
  */
 
-addressed = phi2 & addr:'b'1111110111100xxx;	// $FDE0-$FDE7
-wrAddress = addressed & !rw & !a2 & a1 & !a0;	// $FDE2 Write
-rdStatus1 = addressed & rw & !a2 & a1 & !a0;	// $FDE2 Read
-wrData = addressed & !rw & !a2 & a1 & a0;		// $FDE3 Write
-rdStatus2 = addressed & rw & !a2 & a1 & a0;		// $FDE3 Read
-kbdRead = addressed & a2 & !a1 & a0;			// $FDE5
+addressed = phi2 & addr:'b'11111101111000xx;	// $FDE0-$FDE3
+rwMidi = addressed & !a1;						// $FDE0/1
+wrAddress = addressed & !rw & a1 & !a0;			// $FDE2 Write
+rdStatus1 = addressed & rw & a1 & !a0;			// $FDE2 Read
+wrData = addressed & !rw & a1 & a0;				// $FDE3 Write
+rdStatus2 = addressed & rw & a1 & a0;			// $FDE3 Read
 
 ym_cs = !(wrAddress # wrData # rdStatus1 # rdStatus2);
-ym_rd = !(rdStatus1 # rdStatus2);
-ym_a0 = wrData;
-midi_cs = !kbdRead;
+ym_rd = !(rdStatus1 # rdStatus2);				// Could just be !rw ;)
+ym_a0 = wrData;									// Could just be a0 if we didn't care about reading $FDE3
+midi_cs = !rwMidi;
+
+/* Simpler equations, maybe?
+ *
+ * addressed = phi2 & addr:'b'11111101111000xx;	// $FDE0-$FDE3, address valid
+ *
+ * midi_cs = !(addressed & !a1);					// $FDE0/1
+ * ym_cs = !(addressed & a1);					// $FDE2/3
+ * ym_rd = !(addressed & a1 & rw);			// $FDE2/3 Read (Could just be !rw ;)
+ * ym_a0 = addressed & a1 & a0 & !rw;			// $FDE3 Write (Could just be a0 if we didn't care about reading $FDE3)
+ */

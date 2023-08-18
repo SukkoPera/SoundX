@@ -25,37 +25,38 @@ Assembly None;
 Location Italy;
 Device   g22v10;
 
-ORDER: addr, phi2, rw,   ym_cs, ym_rd, ym_a0;
+ORDER: addr, phi2, rw,   ym_cs, ym_rd, ym_a0, rwMidi;
 
 VECTORS:
 /* Other addresses */
-'0000' 0 0 HH*
-'0000' 0 1 HH*
-'0000' 1 0 HH*
-'0000' 1 1 HH*
-
-'FDE0' 0 0 HH*
-'FDE0' 0 1 HH*
-'FDE0' 1 0 HH*
-'FDE0' 1 1 HH*
-
-'FDE1' 0 0 HH*
-'FDE1' 0 1 HH*
-'FDE1' 1 0 HH*
-'FDE1' 1 1 HH*
+'0000' 0 0 HH*H
+'0000' 0 1 HH*H
+'0000' 1 0 HH*H
+'0000' 1 1 HH*H
 
 /* Write address */
-'FDE2' 0 0 HH*
-'FDE2' 0 1 HH*
-'FDE2' 1 0 LHL
+'FDE2' 0 0 HH*H
+'FDE2' 0 1 HH*H
+'FDE2' 1 0 LHLH
 
 /* Read status (1) */
-'FDE2' 1 1 LLL
+'FDE2' 1 1 LLLH
 
 /* Write data */
-'FDE3' 0 0 HH*
-'FDE3' 0 1 HH*
-'FDE3' 1 0 LHH
+'FDE3' 0 0 HH*H
+'FDE3' 0 1 HH*H
+'FDE3' 1 0 LHHH
 
 /* Read status (2) */
-'FDE3' 1 1 LLL
+'FDE3' 1 1 LLLH
+
+/* MIDI */
+'FDE0' 0 0 HH*H
+'FDE0' 0 1 HH*H
+'FDE0' 1 0 HH*L
+'FDE0' 1 1 HH*L
+
+'FDE1' 0 0 HH*H
+'FDE1' 0 1 HH*H
+'FDE1' 1 0 HH*L
+'FDE1' 1 1 HH*L
