@@ -35,20 +35,20 @@ VECTORS:
 '0000' 1 1 HH*H
 
 /* Write address */
-'FDE2' 0 0 HH*H
-'FDE2' 0 1 HH*H
-'FDE2' 1 0 LHLH
+'FDE4' 0 0 HH*H
+'FDE4' 0 1 HH*H
+'FDE4' 1 0 LHLH
 
 /* Read status (1) */
-'FDE2' 1 1 LLLH
+'FDE4' 1 1 LLLH
 
 /* Write data */
-'FDE3' 0 0 HH*H
-'FDE3' 0 1 HH*H
-'FDE3' 1 0 LHHH
+'FDE5' 0 0 HH*H
+'FDE5' 0 1 HH*H
+'FDE5' 1 0 LHHH
 
 /* Read status (2) */
-'FDE3' 1 1 LLLH
+'FDE5' 1 1 LLLH
 
 /* MIDI */
 'FDE0' 0 0 HH*H
@@ -60,3 +60,13 @@ VECTORS:
 'FDE1' 0 1 HH*H
 'FDE1' 1 0 HH*L
 'FDE1' 1 1 HH*L
+
+'FDE2' 0 0 HH*H
+'FDE2' 0 1 HH*H
+'FDE2' 1 0 HH*L
+'FDE2' 1 1 HH*L
+
+'FDE3' 0 0 HH*H
+'FDE3' 0 1 HH*H
+'FDE3' 1 0 HH*L
+'FDE3' 1 1 HH*L

@@ -77,24 +77,24 @@ Field addr = [a15..0];
  * change that later on, that's why we use a GAL for address decoding :). So, all in all:
  * 
  *      R/W A1 A0 PHI2 | /CS /RD /WR A0 FUNCTION
- * FDE2 x   1  0  0    | 1   x   x   x  Hi-Z
- * FDE2 0/W 1  0  1    | 0   1   0   0  Write Address
- * FDE2 1/R 1  0  1    | 0   0   1   0  Status Read
- * FDE3 x   1  1  0    | 1   x   x   x  Hi-Z
- * FDE3 0/W 1  1  1    | 0   1   0   1  Write Data
- * FDE3 1/R 1  1  1    | 0   0   1   0  Status Read
+ * FDE4 x   1  0  0    | 1   x   x   x  Hi-Z
+ * FDE4 0/W 1  0  1    | 0   1   0   0  Write Address
+ * FDE4 1/R 1  0  1    | 0   0   1   0  Status Read
+ * FDE5 x   1  1  0    | 1   x   x   x  Hi-Z
+ * FDE5 0/W 1  1  1    | 0   1   0   1  Write Data
+ * FDE5 1/R 1  1  1    | 0   0   1   0  Status Read
  */
 
-addressed = phi2 & addr:'b'11111101111000xx;	// $FDE0-$FDE3
-rwMidi = addressed & !a1;						// $FDE0/1
-wrAddress = addressed & !rw & a1 & !a0;			// $FDE2 Write
-rdStatus1 = addressed & rw & a1 & !a0;			// $FDE2 Read
-wrData = addressed & !rw & a1 & a0;				// $FDE3 Write
-rdStatus2 = addressed & rw & a1 & a0;			// $FDE3 Read
+addressed = phi2 & addr:'b'1111110111100xxx;	// $FDE0-$FDE7
+rwMidi = addressed & !a2;						// $FDE0/1/2/3
+wrAddress = addressed & !rw & a2 & !a1 & !a0;	// $FDE4 Write
+rdStatus1 = addressed & rw & a2 & !a1 & !a0;	// $FDE4 Read
+wrData = addressed & !rw & a2 & !a1 & a0;		// $FDE5 Write
+rdStatus2 = addressed & rw & a2 & !a1 & a0;		// $FDE5 Read
 
 ym_cs = !(wrAddress # wrData # rdStatus1 # rdStatus2);
 ym_rd = !(rdStatus1 # rdStatus2);				// Could just be !rw ;)
-ym_a0 = wrData;									// Could just be a0 if we didn't care about reading $FDE3
+ym_a0 = wrData;									// Could just be a0 if we didn't care about reading $FDE5
 midi_cs = !rwMidi;
 
 /* Simpler equations, maybe?
