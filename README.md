@@ -51,7 +51,7 @@ Due to the impressive array of features, the OPL/OPL-II is not easy to program: 
 
 This way you should be able to follow any AdLib programming tutorials around (like [this one](https://bochs.sourceforge.io/techspec/adlib_sb.txt)), as they should be 100% applicable to SoundX just as well, except for the different addresses of course. The chip detection from that document also works!
 
-An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip.
+An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
 
 The MIDI section is handled through a classic ACIA (6551) chip, occupying addresses $FDE0/1/2/3 (these are partly used by Solder's MIDI interface, that's why I chose them). Just set the Baud rate to 19200 bps, which will actually result in the standard 31250 bps MIDI Baud rate on the wire, due to the use of a non-standard crystal.
 
