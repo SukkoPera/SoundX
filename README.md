@@ -37,28 +37,28 @@ There are also a few parameters that can be set for the whole chip:
 The board can even use the slightly more modern YM3812 (OPL-II): *among its newly-added features is the ability to pick between four waveforms for each individual oscillator. In addition to the original sine wave, three modified waveforms can be produced: half-sine waves (where the negative part of the sine is muted), absolute-sine waves (where the negative part is inverted), and pseudo-sawtooth waves (quarter sine waves upward only with silent sections in between)*.
 
 ### MIDI I/O
-The original SFX Sound Expander could be bought [together with a piano-like keyboard](http://www.mssiah-forum.com/viewtopic.php?pid=4598#p4598) and some demo software. Such keyboard is not easy to find these days, so it was pointless to replicate the interface for it and I rather decided to build upon my experience with another project, by adding a real MIDI I/O interface. This means the C16/116/+4 will be able to receive data from a MIDI keyboard or to play it, through a standard DIN-5 MIDI interface.
-
-## Programming
-Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
-
-This way you should be able to follow any AdLib programming tutorials (like [this one](https://bochs.sourceforge.io/techspec/adlib_sb.txt)) around, as they should be 100% applicable to SoundX just as well, except for the different addresses of course. The chip detection from that document also works!
-
-An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This limitation also stands for AdLib sound cards, as it actually is an inherent limitation of the OPL chip.
-
-The MIDI section is handled through a classic ACIA (6551) chip, occupying addresses $FDE0/1/2/3 (these are partly used by Solder's MIDI interface, that's why I chose them). Just set the Baud rate to 19200 bps, which will result in the standard 31250 bps MIDI Baud rate, due to the use of a non-standard crystal.
-
-Of course, to make complete sense, this project needs support from the actual programmers! So people, please make games for the board! Or programs, demos, whatever! I think a nice first step would be to port [the original SFX Sounds Expander software](https://csdb.dk/release/?id=155181): I can't say for sure, but I'm guessing this shouldn't be too much of an effort, plus I can help with the tech details and can explain how to make the MIDI decoder.
-
-Csabo will also release his programs together with the sources, which means a good part is already made!
+The original SFX Sound Expander could be bought [together with a piano-like keyboard](http://www.mssiah-forum.com/viewtopic.php?pid=4598#p4598) and some demo software. Such keyboard is not easy to find these days, so it was pointless to replicate the interface for it and I rather decided to build upon my experience with another project and add a real MIDI I/O interface. This means the C16/116/+4 will be able to receive data from a MIDI keyboard or to play it, through a **standard** DIN-5 MIDI interface.
 
 ## Design and Assembly Notes
 This project makes sense because the YM3812 chip, its companion DAC (YM3014B) and a standard ACIA 6551 chip (for the MIDI part) can all be bought supercheap on AliExpress & similar sites, making this board very affordable to build for everyone. Let's say 15-20€? So get all this stuff second-hand and be happy :).
 
 The audio output is automatically fed back into the computer through the EXT_AUDIO pin, so that you will hear it mixed with the sounds produced by the TED. There is also a 3.5" jack connector on the board, which allows bringing the sound output to external equipment. Note that when a jack is plugged in, the sound will no longer be redirected to the EXT_AUDIO pin.
 
-## Testing
-Now, it should be apparent that no software for this card exists yet, so how could I test it? Master Csabo at the Plus/4 World Forum quickly hacked together a tech demo which plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at).
+Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired.
+
+## Programming
+Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
+
+This way you should be able to follow any AdLib programming tutorials around (like [this one](https://bochs.sourceforge.io/techspec/adlib_sb.txt)), as they should be 100% applicable to SoundX just as well, except for the different addresses of course. The chip detection from that document also works!
+
+An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip.
+
+The MIDI section is handled through a classic ACIA (6551) chip, occupying addresses $FDE0/1/2/3 (these are partly used by Solder's MIDI interface, that's why I chose them). Just set the Baud rate to 19200 bps, which will actually result in the standard 31250 bps MIDI Baud rate on the wire, due to the use of a non-standard crystal.
+
+To avoid starting from zero, you can have a look at the code of the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does card detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
+
+## Next Steps
+Of course, to make complete sense, this project needs support from the actual programmers! So people, please make games for the board! Or programs, demos, whatever! I think a nice first step would be to port [the original SFX Sounds Expander software](https://csdb.dk/release/?id=155181): I can't say for sure, but I'm guessing this shouldn't be too much of an effort, plus I can help with the tech details and can explain how to make the MIDI decoder, just ask! :)
 
 ## License
 The SoundX documentation, including the design itself, is copyright &copy; SukkoPera 2023 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
@@ -79,6 +79,6 @@ You can also buy me a coffee if you want, all the money collected this way will 
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## Thanks
-* Master Csabo and Chizman (unbeknownst) for the help! Also thanks to
-*  kinmami for help with the HW design.
+* Master Csabo and Chizman (unbeknownst) for their help with the testing software.
+* kinmami for his usual precious hints about the hardware design.
 * Iconian Fonts (Daniel Zadorozny) for the [Universal Jack Font](https://www.fontspace.com/universal-jack-font-f101650) used for the logo.
