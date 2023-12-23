@@ -44,7 +44,7 @@ This project makes sense because the YM3812 chip, its companion DAC (YM3014B) an
 
 The audio output is automatically fed back into the computer through the EXT_AUDIO pin, so that you will hear it mixed with the sounds produced by the TED. There is also a 3.5" jack connector on the board, which allows bringing the sound output to external equipment. Note that when a jack is plugged in, the sound will no longer be redirected to the EXT_AUDIO pin.
 
-Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired.
+Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
 
 ## Programming
 Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
@@ -61,6 +61,11 @@ Csabo has also made a [Simple MIDI Decoder](https://plus4world.powweb.com/softwa
 
 ## Next Steps
 Of course, to make complete sense, this project needs support from the actual programmers! So people, please make games for the board! Or programs, demos, whatever! I think a nice first step would be to port [the original SFX Sounds Expander software](https://csdb.dk/release/?id=155181): I can't say for sure, but I'm guessing this shouldn't be too much of an effort, plus I can help with the tech details and can explain how to make the MIDI decoder, just ask! :)
+
+## Releases
+If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/SoundX/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
+
+Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
 ## License
 The SoundX documentation, including the design itself, is copyright &copy; SukkoPera 2023 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
