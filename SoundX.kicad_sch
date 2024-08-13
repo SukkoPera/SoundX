@@ -11722,6 +11722,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "-"
+			(at 351.409 142.113 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6dc3cbe5-e6a9-47d1-8696-cdaa838a42a2")
 		)
@@ -12837,6 +12846,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "-"
+			(at 322.326 230.632 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7163c33b-85de-499f-9489-befae112813f")
 		)
@@ -12905,6 +12923,15 @@
 			)
 		)
 		(property "Notes" "MIDI"
+			(at 340.487 221.869 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "-"
 			(at 340.487 221.869 0)
 			(effects
 				(font
@@ -13122,6 +13149,15 @@
 			)
 		)
 		(property "Notes" "MIDI"
+			(at 212.725 228.727 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "859-6N138"
 			(at 212.725 228.727 0)
 			(effects
 				(font
@@ -13553,7 +13589,7 @@
 		(at 60.96 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000656d203a")
@@ -13582,7 +13618,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "DOCUMENTATION"
+		(property "Datasheet" ""
 			(at 60.96 104.14 0)
 			(effects
 				(font
@@ -14034,6 +14070,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "556-AF22LV10CQZ-30PU"
+			(at 346.71 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "12"
 			(uuid "a72de6a8-7cb4-4996-90b6-599409762394")
 		)
@@ -14299,7 +14344,7 @@
 				(hide yes)
 			)
 		)
-		(property "MouserPN" "810-FG28C0G1H471JNT6"
+		(property "MouserPN" ""
 			(at 252.603 166.751 0)
 			(effects
 				(font
@@ -15525,6 +15570,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "810-FG28X7R1H104KNT0"
+			(at 38.1 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d38c1e8b-ef58-412f-90f1-d40b6ffe7816")
 		)
@@ -15672,7 +15726,7 @@
 				(hide yes)
 			)
 		)
-		(property "MouserPN" "623-2743015112"
+		(property "MouserPN" "875-28C0236-0EW-10"
 			(at 123.952 199.39 0)
 			(effects
 				(font
@@ -15845,6 +15899,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "-"
+			(at 59.69 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3be95b94-18fc-4a50-b7d7-bcc082d8c273")
 		)
@@ -15915,7 +15978,7 @@
 				(hide yes)
 			)
 		)
-		(property "MouserPN" "623-2743015112"
+		(property "MouserPN" "875-28C0236-0EW-10"
 			(at 29.21 26.543 0)
 			(effects
 				(font
@@ -16687,6 +16750,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "710-860010472002"
+			(at 101.981 263.398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "31842cf1-700b-4b28-bbd5-ec7ef560ed13")
 		)
@@ -16755,6 +16827,15 @@
 			)
 		)
 		(property "Notes" "OPL"
+			(at 300.355 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "-"
 			(at 300.355 151.13 0)
 			(effects
 				(font
@@ -17144,6 +17225,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "595-LM324N"
+			(at 229.489 159.258 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c58de37a-1df7-4767-999b-cd360fafeeb5")
 		)
@@ -17249,6 +17339,15 @@
 			)
 		)
 		(property "Notes" "OPL"
+			(at 319.659 137.033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "595-LM324N"
 			(at 319.659 137.033 0)
 			(effects
 				(font
@@ -17369,6 +17468,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "595-LM324N"
+			(at 276.86 161.798 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "80db6758-9b79-44eb-bfe1-e8b6a58ed082")
 		)
@@ -17473,6 +17581,15 @@
 			)
 		)
 		(property "Notes" "OPL"
+			(at 281.94 134.493 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "595-LM324N"
 			(at 281.94 134.493 0)
 			(effects
 				(font
@@ -17587,6 +17704,15 @@
 			)
 		)
 		(property "Notes" "OPL"
+			(at 91.186 263.017 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "595-LM324N"
 			(at 91.186 263.017 0)
 			(effects
 				(font
@@ -17961,7 +18087,7 @@
 				(hide yes)
 			)
 		)
-		(property "MouserPN" "710-860020573008"
+		(property "MouserPN" "710-860010472002"
 			(at 266.954 138.303 0)
 			(effects
 				(font
@@ -18341,6 +18467,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "710-860010472002"
+			(at 341.249 137.033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c9b44f68-03af-4a5c-8ddb-27e72068f067")
 		)
@@ -18647,7 +18782,7 @@
 				(hide yes)
 			)
 		)
-		(property "MouserPN" "623-2743015112"
+		(property "MouserPN" "875-28C0236-0EW-10"
 			(at 123.952 175.26 0)
 			(effects
 				(font
@@ -18809,6 +18944,15 @@
 				(hide yes)
 			)
 		)
+		(property "Notes" "MIDI"
+			(at 97.79 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f78b9fee-84af-478a-b27a-8d0c255d5bbc")
 		)
@@ -18894,6 +19038,15 @@
 				(hide yes)
 			)
 		)
+		(property "MouserPN" "-"
+			(at 85.09 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8bb223dc-409e-42c9-ba0c-7ac3eae027a2")
 		)
@@ -18957,6 +19110,15 @@
 			)
 		)
 		(property "Description" "Asynchronous Communications Interface Adapter 1MHz, DIP-40"
+			(at 228.6 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "MIDI"
 			(at 228.6 64.77 0)
 			(effects
 				(font
@@ -19090,6 +19252,24 @@
 			)
 		)
 		(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
+			(at 72.39 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MouserPN" "520-TCH357-X"
+			(at 72.39 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "OPL"
 			(at 72.39 175.26 0)
 			(effects
 				(font
