@@ -238,7 +238,11 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "pin_not_driven|1517650|1344930|cd8a4b53-fb8e-4bd0-bd8b-5738e197b014|00000000-0000-0000-0000-000000000000|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|",
+      "pin_not_driven|3003550|1473200|6676ac04-5b2c-4737-9bff-c3a13a883c7f|00000000-0000-0000-0000-000000000000|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|",
+      "pin_to_pin|2387600|419100|4c4e7f26-816c-42ed-90c3-b532a9430591|6de8ffa9-2834-4f80-9345-35e79110ba14|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2"
+    ],
     "meta": {
       "version": 0
     },
@@ -898,7 +902,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "SoundX.net",
-      "plot": "",
+      "plot": "gerbers",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
