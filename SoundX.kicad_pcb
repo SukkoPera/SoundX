@@ -3110,12 +3110,12 @@
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "00000000-0000-0000-0000-000064d667e6")
-		(at 152.177 144.018)
+		(at 152.177 143.637)
 		(property "Reference" "CN1"
 			(at 0 5 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "4cb99728-b45f-4846-a3aa-20e4c51227e1")
+			(uuid "91ccb189-099b-49e4-b3aa-b2a8896c351b")
 			(effects
 				(font
 					(size 1 1)
@@ -3127,7 +3127,7 @@
 			(at 0 6.5 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e407e301-83bf-4158-ab4a-548ffa39f533")
+			(uuid "dd0a0bd5-4def-43c8-852c-9380fededbac")
 			(effects
 				(font
 					(size 1 1)
@@ -3139,7 +3139,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b00bbb50-7404-422c-8fcf-c6bd13678d9d")
+			(uuid "02a58414-09e7-4ac9-b81c-820ffdca3133")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3151,7 +3151,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c6ebf778-dc05-4ef1-9dd1-162b4873c958")
+			(uuid "666f581f-873a-40cf-854e-cad9e7037ae7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3163,7 +3163,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5d9cfcdf-014b-427d-ad7d-384accf2b6bd")
+			(uuid "d2f14446-946e-4b4c-83ba-0dbcd5cb8753")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3210,7 +3210,7 @@
 				(type solid)
 			)
 			(layer "Dwgs.User")
-			(uuid "aa57363c-de21-4114-bcf7-0806806759fd")
+			(uuid "98de45bf-7b89-4c38-b1b9-67289247177a")
 		)
 		(fp_line
 			(start -26 4)
@@ -3220,7 +3220,7 @@
 				(type solid)
 			)
 			(layer "Dwgs.User")
-			(uuid "9c70dcc3-812c-4982-a062-d346d3bbe0f0")
+			(uuid "b6b403a2-7fc2-4d20-8b0e-a94a396b734e")
 		)
 		(fp_line
 			(start 26 -28)
@@ -3230,7 +3230,7 @@
 				(type solid)
 			)
 			(layer "Dwgs.User")
-			(uuid "05d47457-07ed-42c5-919f-f7e2622dac51")
+			(uuid "4fe98b6d-cadb-4b40-98c0-a9d3fcead2fc")
 		)
 		(fp_line
 			(start 26 4)
@@ -3240,12 +3240,12 @@
 				(type solid)
 			)
 			(layer "Dwgs.User")
-			(uuid "37b49a0f-476d-4645-af68-87f8494dd7b4")
+			(uuid "ef265024-bf49-4957-83f5-43936e0c1597")
 		)
 		(fp_text user "This is exactly the size that will fit INTO your C16"
 			(at 0 -29.464 0)
 			(layer "Dwgs.User")
-			(uuid "6640726d-130d-4cef-9487-07b674431ba0")
+			(uuid "12f0ae7c-9c27-4b8a-a432-bc7327fe6402")
 			(effects
 				(font
 					(size 1 1)
@@ -3254,22 +3254,22 @@
 			)
 		)
 		(pad "" smd rect
-			(at 0 0)
+			(at 0 0.4)
 			(size 52 8)
 			(layers "B.Mask")
 			(zone_connect 2)
-			(uuid "c5bbf03e-bd57-43c4-9773-8922ebc0785e")
+			(uuid "792904f9-9b8c-44f9-97e5-20f92c7e7591")
 		)
 		(pad "" smd rect
-			(at 0 0)
+			(at 0 0.4)
 			(size 52 8)
 			(layers "F.Mask")
 			(zone_connect 2)
-			(uuid "62348dbc-7943-4335-abd8-d190b05d5de3")
+			(uuid "b769764f-693b-4c82-9e53-844fc9c0fece")
 		)
 		(pad "1" smd custom
 			(at -24 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 1 "GND")
 			(pinfunction "GND")
@@ -3282,18 +3282,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "31522d2f-5f9a-47a3-8576-5d6098010b51")
+			(uuid "fa66bf89-9212-4e89-b540-2f606fbcee18")
 		)
 		(pad "2" smd custom
 			(at -22 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 86 "Net-(C14-Pad1)")
 			(pinfunction "VCC")
@@ -3306,18 +3306,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "361632b8-c625-482f-85a7-774e6ffba921")
+			(uuid "1f419902-a9b8-4f89-b672-0fc66ea425b6")
 		)
 		(pad "3" smd custom
 			(at -20 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 86 "Net-(C14-Pad1)")
 			(pinfunction "VCC")
@@ -3330,18 +3330,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "511895c3-ea02-469d-a13f-a4c4fac997bc")
+			(uuid "eaec6e29-f095-4db3-bc35-b2fbdd684d42")
 		)
 		(pad "4" smd custom
 			(at -18 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 50 "/~{irq}")
 			(pinfunction "/IRQ")
@@ -3354,18 +3354,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "ee145578-0cbc-45a7-b19c-2057c56e7188")
+			(uuid "29d24035-eeb5-4ecb-8673-71f03d715df9")
 		)
 		(pad "5" smd custom
 			(at -16 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 11 "/r_~{w}")
 			(pinfunction "R/W")
@@ -3378,18 +3378,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "331d6a7a-9b1b-432d-b836-19ce1ca2fdba")
+			(uuid "756a16a0-3430-4e4c-96bb-915a1a0d6ad8")
 		)
 		(pad "6" smd custom
 			(at -14 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 37 "unconnected-(CN1-C1HI-Pad6)")
 			(pinfunction "C1HI")
@@ -3402,18 +3402,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "414de364-6883-44bc-abcb-2938b8fbcbbe")
+			(uuid "38bf07f9-a431-4393-b2b7-ee6d26040cd1")
 		)
 		(pad "7" smd custom
 			(at -12 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 42 "unconnected-(CN1-C2LOW-Pad7)")
 			(pinfunction "C2LOW")
@@ -3426,18 +3426,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "a84e8c3c-824c-44e2-8914-925f3b68e6bf")
+			(uuid "add58ebe-9523-4450-9e23-187b0d66cd29")
 		)
 		(pad "8" smd custom
 			(at -10 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 39 "unconnected-(CN1-C2HI-Pad8)")
 			(pinfunction "C2HI")
@@ -3450,18 +3450,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "5ae93a10-ff40-4793-837f-b6ece24819e6")
+			(uuid "04970f35-90e9-4421-b662-ad4102f21601")
 		)
 		(pad "9" smd custom
 			(at -8 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 44 "unconnected-(CN1-{slash}CS1-Pad9)")
 			(pinfunction "/CS1")
@@ -3474,18 +3474,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "c0ca5042-efb4-4906-9a63-a72399a30ad0")
+			(uuid "e2d49700-9654-4c38-b053-0076d58ee252")
 		)
 		(pad "10" smd custom
 			(at -6 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 40 "unconnected-(CN1-{slash}CS0-Pad10)")
 			(pinfunction "/CS0")
@@ -3498,18 +3498,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "73d146eb-d636-4a32-8897-78f9bc880098")
+			(uuid "6f802cb3-7ab6-4734-a057-82334bfa3a3a")
 		)
 		(pad "11" smd custom
 			(at -4 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 43 "unconnected-(CN1-{slash}CAS-Pad11)")
 			(pinfunction "/CAS")
@@ -3522,18 +3522,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "b5c55622-1ba4-4267-8c1f-2e39ab8acc2d")
+			(uuid "46fc9dae-af01-4bd2-96ff-d7c66ed8abdf")
 		)
 		(pad "12" smd custom
 			(at -2 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 48 "unconnected-(CN1-MUX-Pad12)")
 			(pinfunction "MUX")
@@ -3546,18 +3546,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "e468cda8-04a3-422d-8c88-65c824e7767a")
+			(uuid "794628ef-0d54-4592-bfb3-d36234d5066d")
 		)
 		(pad "13" smd custom
 			(at 0 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 49 "unconnected-(CN1-BA-Pad13)")
 			(pinfunction "BA")
@@ -3570,18 +3570,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "fba5d5c9-77dc-4931-84e6-e6530196d94f")
+			(uuid "d823c3f8-552f-49b9-80a0-ac8826b15afc")
 		)
 		(pad "14" smd custom
 			(at 2 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 3 "/d7")
 			(pinfunction "D7")
@@ -3594,18 +3594,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "bdbcaaf6-e98f-4449-a885-dfdbd786541f")
+			(uuid "6dbe349d-2e7f-47cc-8af6-92bd0d2498be")
 		)
 		(pad "15" smd custom
 			(at 4 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 4 "/d6")
 			(pinfunction "D6")
@@ -3618,18 +3618,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "d54f34c0-d03f-4706-9680-e848ad0439ae")
+			(uuid "f963b71d-1dea-4d64-84b9-fcb60d49a063")
 		)
 		(pad "16" smd custom
 			(at 6 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 6 "/d5")
 			(pinfunction "D5")
@@ -3642,18 +3642,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "0f814d33-c09a-44f7-803d-8d5aeadc6c0e")
+			(uuid "8969d498-f570-4978-b04f-63d3dc60c27d")
 		)
 		(pad "17" smd custom
 			(at 8 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 5 "/d4")
 			(pinfunction "D4")
@@ -3666,18 +3666,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "6cb8a154-f252-4d52-8a9e-1457f6e1215d")
+			(uuid "f2702f6f-933e-44a0-ae12-c191c69ce423")
 		)
 		(pad "18" smd custom
 			(at 10 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 7 "/d3")
 			(pinfunction "D3")
@@ -3690,18 +3690,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "d1c0910b-d665-4f4d-9c51-9ef93d33ed1a")
+			(uuid "b72eba30-f6f7-4730-aabb-6411ac856105")
 		)
 		(pad "19" smd custom
 			(at 12 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 8 "/d2")
 			(pinfunction "D2")
@@ -3714,18 +3714,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "14d165f8-dc54-40d1-a16c-55d23ddb6c4b")
+			(uuid "61836bde-bae4-4d00-ac6d-e625e2274cb3")
 		)
 		(pad "20" smd custom
 			(at 14 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 9 "/d1")
 			(pinfunction "D1")
@@ -3738,18 +3738,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "46c1d73c-ee7a-415a-a908-571c93d37ca7")
+			(uuid "c11ca61b-fbe0-4b10-af63-ca0f366764a6")
 		)
 		(pad "21" smd custom
 			(at 16 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 10 "/d0")
 			(pinfunction "D0")
@@ -3762,18 +3762,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "45b84f4c-1c29-45d5-8f0f-4ade56d7fc18")
+			(uuid "d03ff121-c2ac-48ff-8a29-81fe79f86d3f")
 		)
 		(pad "22" smd custom
 			(at 18 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 45 "unconnected-(CN1-AEC-Pad22)")
 			(pinfunction "AEC")
@@ -3786,18 +3786,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "c1c66868-a2da-42be-a55c-2619ff89fc36")
+			(uuid "bcf5af25-bc4c-42e7-9f69-040d99b1d641")
 		)
 		(pad "23" smd custom
 			(at 20 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 30 "/ext_audio")
 			(pinfunction "EXT_AUDIO")
@@ -3810,18 +3810,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "18a30b1e-dad8-4585-8a27-022b98bced34")
+			(uuid "53acf79a-8c42-4012-9adb-ed0d1a99541f")
 		)
 		(pad "24" smd custom
 			(at 22 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 12 "/phi2")
 			(pinfunction "PHI2")
@@ -3834,18 +3834,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "ef26358d-097e-4c06-a152-f13800dcb4d0")
+			(uuid "2f2d826c-e8c3-4e62-a068-e899b5385504")
 		)
 		(pad "25" smd custom
 			(at 24 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "F.Cu")
 			(net 1 "GND")
 			(pinfunction "GND")
@@ -3858,18 +3858,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "11dab186-8d9a-4d4e-9e90-a705a950c354")
+			(uuid "d3c72ebf-81dd-46bf-9956-65f4ff036834")
 		)
 		(pad "A" smd custom
 			(at -24 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 1 "GND")
 			(pinfunction "GND")
@@ -3882,18 +3882,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "81d6dd13-4bd1-40b9-bd40-015e5aa4e1d2")
+			(uuid "53f92168-e122-4d90-8584-01a572ff6f6c")
 		)
 		(pad "AA" smd custom
 			(at 20 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 36 "unconnected-(CN1-NC-PadAA)")
 			(pinfunction "NC")
@@ -3906,18 +3906,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "2288755c-4904-4e77-b95b-dd56e7959f03")
+			(uuid "132dc484-6283-4224-9e69-d3ffa36c17ab")
 		)
 		(pad "B" smd custom
 			(at -22 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 52 "unconnected-(CN1-C1LOW-PadB)")
 			(pinfunction "C1LOW")
@@ -3930,18 +3930,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "fdd30027-afd9-4b79-a6ac-d094ff8c09a6")
+			(uuid "ab444f89-1fef-40a6-b792-490e259441f8")
 		)
 		(pad "BB" smd custom
 			(at 22 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 35 "unconnected-(CN1-NC-PadBB)")
 			(pinfunction "NC")
@@ -3954,18 +3954,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "17645c3f-34cc-43a7-b8fd-2229e41239c9")
+			(uuid "0945b0b9-e98b-4e80-bc35-6ae3a67c4d09")
 		)
 		(pad "C" smd custom
 			(at -20 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 13 "/~{reset}")
 			(pinfunction "/BRESET")
@@ -3978,18 +3978,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "bfbb9f3b-71f0-4a85-8728-c136943bd4fa")
+			(uuid "17037ea4-3d2a-4068-9930-d144df3fdb74")
 		)
 		(pad "CC" smd custom
 			(at 24 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 1 "GND")
 			(pinfunction "GND")
@@ -4002,18 +4002,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "039542e3-e810-4c7a-9f28-994522e04fc7")
+			(uuid "e27a4236-9ae7-402c-975a-e95482681532")
 		)
 		(pad "D" smd custom
 			(at -18 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 38 "unconnected-(CN1-{slash}RAS-PadD)")
 			(pinfunction "/RAS")
@@ -4026,18 +4026,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "42590541-9c54-4a77-851a-a60acdefcea6")
+			(uuid "fe99fe2b-7ca0-4afb-b940-7ae80ab0cd6f")
 		)
 		(pad "E" smd custom
 			(at -16 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 46 "unconnected-(CN1-PHI0-PadE)")
 			(pinfunction "PHI0")
@@ -4050,18 +4050,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "c7f74df9-c4e0-4111-af2b-537d03484966")
+			(uuid "521d2da3-6295-449d-a418-90cb38e57e78")
 		)
 		(pad "F" smd custom
 			(at -14 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 14 "/a15")
 			(pinfunction "A15")
@@ -4074,18 +4074,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "6a15d91c-3a74-4b36-82ee-d582410f1f13")
+			(uuid "829dd9d6-6608-4f7b-a3e6-4537d9e87680")
 		)
 		(pad "H" smd custom
 			(at -12 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 15 "/a14")
 			(pinfunction "A14")
@@ -4098,18 +4098,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "d1ccbf22-8dde-4ef6-92a6-043964a2ee9b")
+			(uuid "70c44b02-1632-4677-8e07-77bf2c07617b")
 		)
 		(pad "J" smd custom
 			(at -10 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 16 "/a13")
 			(pinfunction "A13")
@@ -4122,18 +4122,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "eff8d270-0187-4421-b557-d06bef406137")
+			(uuid "e25a0e1a-22a4-474a-a6eb-69d899da8de7")
 		)
 		(pad "K" smd custom
 			(at -8 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 17 "/a12")
 			(pinfunction "A12")
@@ -4146,18 +4146,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "7d6412a4-60b8-410c-93cf-5f0b599a6ea3")
+			(uuid "7035d29c-fd91-44ac-ba35-a1e8daae13d3")
 		)
 		(pad "L" smd custom
 			(at -6 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 18 "/a11")
 			(pinfunction "A11")
@@ -4170,18 +4170,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "076f3b55-1dad-436f-b055-6dee207ceb6d")
+			(uuid "1b131319-b4e1-478e-851c-7bbc7d239ae5")
 		)
 		(pad "M" smd custom
 			(at -4 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 19 "/a10")
 			(pinfunction "A10")
@@ -4194,18 +4194,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "2de49d41-9607-4b80-878a-347cd15a0302")
+			(uuid "c0d43a40-b70c-40f9-a57a-bb44b2577875")
 		)
 		(pad "N" smd custom
 			(at -2 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 20 "/a9")
 			(pinfunction "A9")
@@ -4218,18 +4218,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "9fd885b9-ac39-4fda-b006-97c8a6cc6048")
+			(uuid "9f08f4c4-43f4-4ea8-957c-e5ad76200edb")
 		)
 		(pad "P" smd custom
 			(at 0 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 21 "/a8")
 			(pinfunction "A8")
@@ -4242,18 +4242,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "aa3b3032-0969-43a9-8650-646cbf4cf522")
+			(uuid "a2d009fc-c535-4448-b611-fbdbcc0be7e0")
 		)
 		(pad "R" smd custom
 			(at 2 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 22 "/a7")
 			(pinfunction "A7")
@@ -4266,18 +4266,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "4606af4d-9624-4a6b-bed5-c69aa661e697")
+			(uuid "2db8504a-d1f5-4015-8aa3-d9672a372219")
 		)
 		(pad "S" smd custom
 			(at 4 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 23 "/a6")
 			(pinfunction "A6")
@@ -4290,18 +4290,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "ff3b6796-eea3-4d6a-948f-2b0c8b2cc4fe")
+			(uuid "8b29ae5c-dbab-44bc-ad67-93f0e5291a06")
 		)
 		(pad "T" smd custom
 			(at 6 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 24 "/a5")
 			(pinfunction "A5")
@@ -4314,18 +4314,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "39b9cb60-5caa-40aa-adc9-2abc6553a94a")
+			(uuid "e4a47e3a-c4a7-4994-a162-b44cb483b9b9")
 		)
 		(pad "U" smd custom
 			(at 8 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 25 "/a4")
 			(pinfunction "A4")
@@ -4338,18 +4338,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "50fe6697-c151-4d19-b83c-0e1291474d75")
+			(uuid "afd7914a-12b4-41d5-ae04-aa7d23bd56c1")
 		)
 		(pad "V" smd custom
 			(at 10 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 28 "/a3")
 			(pinfunction "A3")
@@ -4362,18 +4362,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "a5293dca-e702-4d19-85d3-139794057add")
+			(uuid "4de155e1-46b5-4416-ad35-de490efbc897")
 		)
 		(pad "W" smd custom
 			(at 12 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 29 "/a2")
 			(pinfunction "A2")
@@ -4386,18 +4386,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "c841cb9f-7b76-4869-ab27-de0ba1c18fcf")
+			(uuid "d1820c14-e498-4c03-bc51-a922596200c2")
 		)
 		(pad "X" smd custom
 			(at 14 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 26 "/a1")
 			(pinfunction "A1")
@@ -4410,18 +4410,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "630578db-1b66-4805-b26e-5d44ae6f6b68")
+			(uuid "5a62fcbf-5039-4e1f-8022-a54f1164f87b")
 		)
 		(pad "Y" smd custom
 			(at 16 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 27 "/a0")
 			(pinfunction "A0")
@@ -4434,18 +4434,18 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "262a907c-0606-4e92-8ebf-d141c4624af4")
+			(uuid "c317cd26-bf23-4f6b-b687-fc303801f4a5")
 		)
 		(pad "Z" smd custom
 			(at 18 0)
-			(size 0.9 8)
+			(size 0.9 7.2)
 			(layers "B.Cu")
 			(net 41 "unconnected-(CN1-NC-PadZ)")
 			(pinfunction "NC")
@@ -4458,14 +4458,14 @@
 			(primitives
 				(gr_poly
 					(pts
-						(xy 0.632 -2) (xy 0.632 2.032) (xy 0.378 3.937) (xy -0.384 3.937) (xy -0.638 2.032) (xy -0.638 -2)
-						(xy -0.384 -3.5) (xy 0.378 -3.5)
+						(xy 0.632 -2) (xy 0.632 1.524) (xy 0.378 3.429) (xy -0.384 3.429) (xy -0.638 1.524) (xy -0.638 -2)
+						(xy -0.384 -2.921) (xy 0.378 -2.921)
 					)
 					(width 0.1)
 					(fill yes)
 				)
 			)
-			(uuid "9ec4ea77-611a-4fa0-8c36-5921fc701dd1")
+			(uuid "08535f4a-f278-4ad7-b5eb-2212365ec0f2")
 		)
 	)
 	(footprint "SoundX:AudioJack_SJ1-3525N"
