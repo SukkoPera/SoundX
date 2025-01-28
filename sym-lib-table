@@ -6,4 +6,5 @@
   (lib (name "YM3014")(type "KiCad")(uri "${KIPRJMOD}/libs/YM3014.kicad_sym")(options "")(descr ""))
   (lib (name "W65C51S")(type "KiCad")(uri "${KIPRJMOD}/libs/W65C51S.kicad_sym")(options "")(descr ""))
   (lib (name "SoundX-rescue")(type "KiCad")(uri "${KIPRJMOD}/SoundX-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "C16-Exp-Port-44pin-In")(type "KiCad")(uri "${KIPRJMOD}/libs/C16-Exp-Port-44pin-In.kicad_sym")(options "")(descr ""))
 )
