@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.254
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -240,7 +240,16 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "pin_not_driven|1155700|571500|15aa9a9f-638c-486a-a80e-ec2a43a22751|00000000-0000-0000-0000-000000000000|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|",
+      "pin_not_driven|2425700|1485900|6676ac04-5b2c-4737-9bff-c3a13a883c7f|00000000-0000-0000-0000-000000000000|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|",
+      "pin_not_driven|2430780|1487170|6676ac04-5b2c-4737-9bff-c3a13a883c7f|00000000-0000-0000-0000-000000000000|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|",
+      "pin_to_pin|1600200|393700|4c4e7f26-816c-42ed-90c3-b532a9430591|6de8ffa9-2834-4f80-9345-35e79110ba14|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2",
+      "pin_to_pin|787400|571500|d3050611-32fe-430c-bf5d-09373e9ff4af|0283f0ea-617e-4936-b553-f5579c109a39|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2",
+      "pin_to_pin|787400|622300|edbc6f3b-91c3-4d29-8a66-bd83c70fdc06|d1234265-b7e1-4ce0-95f9-e017482f263a|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2",
+      "pin_to_pin|787400|673100|3203cb25-0c86-4f6f-b0ba-916741aee72e|3e3546e6-6344-408e-992a-105721ff35a6|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2",
+      "pin_to_pin|787400|723900|8e683c31-75c3-485e-83d8-69d70113320d|01eaf10a-e1eb-487c-acb1-0941cff86f0a|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2|/03a251b6-65fe-465c-8232-d6f8713652f2"
+    ],
     "meta": {
       "version": 0
     },
@@ -424,7 +433,7 @@
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
-      "endpoint_off_grid": "ignore",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
@@ -440,7 +449,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
