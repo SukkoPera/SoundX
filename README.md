@@ -42,6 +42,8 @@ The original SFX Sound Expander could be bought [together with a piano-like keyb
 ## Design and Assembly Notes
 This project makes sense because the YM3812 chip, its companion DAC (YM3014B) and a standard ACIA 6551 chip (for the MIDI part) can all be bought supercheap on AliExpress & similar sites, making this board very affordable to build for everyone. Let's say 15-20€? So get all this stuff second-hand and be happy :).
 
+Remember to solder the JP5 jumper on the back of the board: I suggest the ON position unless you know what you are doing (check the schematics).
+
 The audio output is automatically fed back into the computer through the EXT_AUDIO pin, so that you will hear it mixed with the sounds produced by the TED. There is also a 3.5" jack connector on the board, which allows bringing the sound output to external equipment. Note that when a jack is plugged in, the sound will no longer be redirected to the EXT_AUDIO pin.
 
 Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
