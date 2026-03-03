@@ -53,19 +53,19 @@ The audio output is automatically fed back into the computer through the EXT_AUD
 
 Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
 
-There are some jumpers on the board:
+There are some solder jumpers on the board:
 - JP1: Close if your oscillator requires pin 1 to be grounded (uncommon).
 - JP2: Close if you want the same signal sent to both channels of the jack connector.
 - JP3/JP4: Close these to provide +5V on the normally-unused pins of the MIDI output connector: **this is non-standard and might actually damage the board or the connected device**, so keep these open unless you REALLY know what you are doing.
 - JP5: The YM3812 can either go through a 15 kHz low-pass filter (ON) or not (BYPass): normally set to ON.
 
 ### Version 2
-As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JP7 accordingly. Note that, when using the 500 kHz oscillator, U5 is not required and can be skipped altogether.
+As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JP7 accordingly. Note that, when using the 500 kHz oscillator, U5 and C12 are not required and can be skipped altogether.
 
-Version 2 features additional solder jumpers:
+Version 2 features additional jumpers:
 - JP6: Same as JP1 for the MC6850 oscillator.
 - JP7: Set in accordance with the oscillator frequency.
-- JP8: Set to A1 and don't ask questions!
+- JP8: Set to R/W and don't ask questions! If you want to know more, see [this](https://github.com/mist-devel/c64/issues/1).
 
 ## Programming
 Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
@@ -85,7 +85,7 @@ Configure the chip for:
 The MC6850 only has two register, which get mapped at $FDE0/1, which makes me think that this is exactly the same design used by Solder's interface. The software configuration is the same, regardless of what oscillator is installed: configure the chip for No interrupt, /RTS Low (Unneeded), 8 Data bits + 1 Stop bit, No Parity, Clock Divider = 16 (i.e.: $15)
 
 > [!NOTE]
-> Please always support both boards in your projects. You can find a driver that does so on the [Wiki](https://github.com/SukkoPera/SoundX/wiki).
+> Please always support both board versions in your projects. It is easy and you can find a driver that does so on the [Wiki](https://github.com/SukkoPera/SoundX/wiki).
 
 ### Examples
 If you want some code to start from, you can have a look at the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does OPL detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
