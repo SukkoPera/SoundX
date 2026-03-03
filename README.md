@@ -53,8 +53,19 @@ The audio output is automatically fed back into the computer through the EXT_AUD
 
 Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
 
+There are some jumpers on the board:
+- JP1: Close if your oscillator requires pin 1 to be grounded (uncommon).
+- JP2: Close if you want the same signal sent to both channels of the jack connector.
+- JP3/JP4: Close these to provide +5V on the normally-unused pins of the MIDI output connector: **this is non-standard and might actually damage the board or the connected device**, so keep these open unless you REALLY know what you are doing.
+- JP5: The YM3812 can either go through a 15 kHz low-pass filter (ON) or not (BYPass): normally set to ON.
+
 ### Version 2
-As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JPx accordingly. Note that, when using the 500 kHz oscillator, Ux is not required and can be skipped altogether.
+As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JP7 accordingly. Note that, when using the 500 kHz oscillator, U5 is not required and can be skipped altogether.
+
+Version 2 features additional solder jumpers:
+- JP6: Same as JP1 for the MC6850 oscillator.
+- JP7: Set in accordance with the oscillator frequency.
+- JP8: Set to A1 and don't ask questions!
 
 ## Programming
 Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
@@ -64,19 +75,19 @@ This means that you should be able to follow any AdLib programming tutorials aro
 An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
 
 ### Version 1
-The classic ACIA (6551) chip running the MIDI section, uses addresses $FDE0/1/2/3 (I chose these addresses because they were already partly used by Solder's MIDI interface). Just set the Baud rate to 19200 bps, which will actually result in the standard 31250 bps MIDI Baud rate on the wire, due to the use of a non-standard crystal.
+The classic ACIA (6551) chip running the MIDI section uses addresses $FDE0/1/2/3 (I chose these addresses because they were already partly used by Solder's MIDI interface).
 
 Configure the chip for:
 - No Parity, No Echo, No TX Interrupt, /RTS Low (Unneeded), No RX Interrupt, /DTR Low (Unneeded) &rarr; $0b to Command Register
-- 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250) &rarr; $1f to Control Register
+- 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250 due to the use of a non-standard crystal) &rarr; $1f to Control Register
 
 ### Version 2
 The MC6850 only has two register, which get mapped at $FDE0/1, which makes me think that this is exactly the same design used by Solder's interface. The software configuration is the same, regardless of what oscillator is installed: configure the chip for No interrupt, /RTS Low (Unneeded), 8 Data bits + 1 Stop bit, No Parity, Clock Divider = 16 (i.e.: $15)
 
-
 > [!NOTE]
 > Please always support both boards in your projects. You can find a driver that does so on the [Wiki](https://github.com/SukkoPera/SoundX/wiki).
 
+### Examples
 If you want some code to start from, you can have a look at the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does OPL detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
 
 Csabo has also made a [Simple MIDI Decoder](https://plus4world.powweb.com/software/Simple_MIDI_Decoder) utility that listens for NoteOn and NoteOff messages coming in through the MIDI port and plays the corresponding notes through the TED. Again, it comes with full source code and thus it should help you have a jump start.
@@ -93,7 +104,7 @@ If you want to get this board produced, you are recommended to get [the latest r
 Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
 ## License
-The SoundX documentation, including the design itself, is copyright &copy; SukkoPera 2023 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The SoundX documentation, including the design itself, is copyright &copy; SukkoPera 2023-2025 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 This documentation is distributed *as is* and WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES whatsoever with respect to its functionality, operability or use, including, without limitation, any implied warranties OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE or infringement. We expressly disclaim any liability whatsoever for any direct, indirect, consequential, incidental or special damages, including, without limitation, lost revenues, lost profits, losses resulting from business interruption or loss of data, regardless of the form of action or legal theory under which the liability may be asserted, even if advised of the possibility or likelihood of such damages.
 
