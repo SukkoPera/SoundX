@@ -39,8 +39,13 @@ The board can even use the slightly more modern YM3812 (OPL-II): *among its newl
 ### MIDI I/O
 The original SFX Sound Expander could be bought [together with a piano-like keyboard](http://www.mssiah-forum.com/viewtopic.php?pid=4598#p4598) and some demo software. Such keyboard is not easy to find these days, so it was pointless to replicate the interface for it and I rather decided to build upon my experience with another project and add a real MIDI I/O interface. This means the C16/116/+4 will be able to receive data from a MIDI keyboard or to play it, through a **standard** DIN-5 MIDI interface.
 
+## Versions
+There are currently two versions of SoundX. Both have the same features and differ only in a few aspects:
+- Version 1 uses a standard ACIA 6551 chip for the MIDI interface. This is available by different manufacturers (MOS, Rockwell, and even new from the Western Design Center!) and requires a 3 MHz crystal to reach the MIDI baudrate. The YM3812 requires an active oscillator either in DIP-8 or DIP-14 size.
+- Version 2 switched to a Motorola MC6850 chip that requires an active oscillator in DIP-8 size, running at either 500 kHz or 2 Mhz (see below). In order to make space for it, the YM3812 oscillator was also restricted to DIP-8 size.
+
 ## Design and Assembly Notes
-This project makes sense because the YM3812 chip, its companion DAC (YM3014B) and a standard ACIA 6551 chip (for the MIDI part) can all be bought supercheap on AliExpress & similar sites, making this board very affordable to build for everyone. Let's say 15-20€? So get all this stuff second-hand and be happy :).
+This project makes sense because the YM3812 chip, its companion DAC (YM3014B) and an ACIA chip (for the MIDI part) can all be bought supercheap on AliExpress & similar sites, making this board very affordable to build for everyone. Let's say 15-20€? So get all this stuff second-hand and be happy :).
 
 Remember to solder the JP5 jumper on the back of the board: I suggest the ON position unless you know what you are doing (check the schematics).
 
@@ -48,14 +53,31 @@ The audio output is automatically fed back into the computer through the EXT_AUD
 
 Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
 
+### Version 2
+As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JPx accordingly. Note that, when using the 500 kHz oscillator, Ux is not required and can be skipped altogether.
+
 ## Programming
 Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
 
 This means that you should be able to follow any AdLib programming tutorials around (like [this one](https://bochs.sourceforge.io/techspec/adlib_sb.txt)), as they should be 100% applicable to SoundX just as well (except for the different addresses, of course). The chip detection from that document also works!
 
-If you want some code to start from, you can have a look at the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does OPL detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
+An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
 
-The MIDI section is handled through a classic ACIA (6551) chip, occupying addresses $FDE0/1/2/3 (I chose these addresses because they were already partly used by Solder's MIDI interface). Just set the Baud rate to 19200 bps, which will actually result in the standard 31250 bps MIDI Baud rate on the wire, due to the use of a non-standard crystal.
+### Version 1
+The classic ACIA (6551) chip running the MIDI section, uses addresses $FDE0/1/2/3 (I chose these addresses because they were already partly used by Solder's MIDI interface). Just set the Baud rate to 19200 bps, which will actually result in the standard 31250 bps MIDI Baud rate on the wire, due to the use of a non-standard crystal.
+
+Configure the chip for:
+- No Parity, No Echo, No TX Interrupt, /RTS Low (Unneeded), No RX Interrupt, /DTR Low (Unneeded) &rarr; $0b to Command Register
+- 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250) &rarr; $1f to Control Register
+
+### Version 2
+The MC6850 only has two register, which get mapped at $FDE0/1, which makes me think that this is exactly the same design used by Solder's interface. The software configuration is the same, regardless of what oscillator is installed: configure the chip for No interrupt, /RTS Low (Unneeded), 8 Data bits + 1 Stop bit, No Parity, Clock Divider = 16 (i.e.: $15)
+
+
+> [!NOTE]
+> Please always support both boards in your projects. You can find a driver that does so on the [Wiki](https://github.com/SukkoPera/SoundX/wiki).
+
+If you want some code to start from, you can have a look at the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does OPL detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
 
 Csabo has also made a [Simple MIDI Decoder](https://plus4world.powweb.com/software/Simple_MIDI_Decoder) utility that listens for NoteOn and NoteOff messages coming in through the MIDI port and plays the corresponding notes through the TED. Again, it comes with full source code and thus it should help you have a jump start.
 
