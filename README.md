@@ -68,20 +68,22 @@ Version 2 features additional jumpers:
 - JP8: Set to R/W and don't ask questions! If you want to know more, see [this](https://github.com/mist-devel/c64/issues/1).
 
 ## Programming
+### OPL/OPL-II
 Due to the impressive array of features, the OPL/OPL-II is not easy to program: the chip has 244 registers, so it would take a while to get acquainted with it and there is really not much documentation about how to program the SFX Sound Expander. This is one of the reasons why I decided to diverge a bit from the SFX Sound Expander on the programming side and rather followed the AdLib style: the board only uses two addresses for the audio part: $FDE4 and $FDE5. The former is for writing the number of the YM register to be modified while the latter is for the value. The former address can also be read and it will return the OPL status register, which is only useful for the detection of the board or if you want to make use of the OPL internal timers.
 
 This means that you should be able to follow any AdLib programming tutorials around (like [this one](https://bochs.sourceforge.io/techspec/adlib_sb.txt)), as they should be 100% applicable to SoundX just as well (except for the different addresses, of course). The chip detection from that document also works!
 
-An important thing to keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
+> [!IMPORTANT]
+> When programming the OPL chip, always keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
 
-### Version 1
+### MIDI I/O - Version 1
 The classic ACIA (6551) chip running the MIDI section uses addresses $FDE0/1/2/3 (I chose these addresses because they were already partly used by Solder's MIDI interface).
 
 Configure the chip for:
 - No Parity, No Echo, No TX Interrupt, /RTS Low (Unneeded), No RX Interrupt, /DTR Low (Unneeded) &rarr; $0b to Command Register
 - 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250 due to the use of a non-standard crystal) &rarr; $1f to Control Register
 
-### Version 2
+### MIDI I/O - Version 2
 The MC6850 only has two register, which get mapped at $FDE0/1, which makes me think that this is exactly the same design used by Solder's interface. The software configuration is the same, regardless of what oscillator is installed: configure the chip for No interrupt, /RTS Low (Unneeded), 8 Data bits + 1 Stop bit, No Parity, Clock Divider = 16 (i.e.: $15)
 
 > [!NOTE]
@@ -91,9 +93,6 @@ The MC6850 only has two register, which get mapped at $FDE0/1, which makes me th
 If you want some code to start from, you can have a look at the [Tech Demo that Master Csabo from the Plus/4 World Forum quickly hacked together](https://plus4world.powweb.com/software/YM3812_Tech_Demo): it does OPL detection and then plays a few songs from the original [AdLib Card Demo](https://vgmrips.net/packs/pack/adlib-music-synthesizer-card-demo-songs-ibm-pc-xt-at). It comes with full source code, so it will definitely be helpful!
 
 Csabo has also made a [Simple MIDI Decoder](https://plus4world.powweb.com/software/Simple_MIDI_Decoder) utility that listens for NoteOn and NoteOff messages coming in through the MIDI port and plays the corresponding notes through the TED. Again, it comes with full source code and thus it should help you have a jump start.
-
-> [!IMPORTANT]
-> When programming the OPL chip, always keep in mind is that **you must wait at least 3.3 microseconds after you wrote the address, before you write the data, and then at least 23 microseconds before the next write**. This stands for AdLib sound cards as well, since it is an inherent limitation of the OPL chip. Nevertheless, [some clever programming](https://c64.xentax.com/index.php/15-testing-ym3812-register-write-timing) appears to be able to mitigate the issue.
 
 ## Next Steps
 Of course, to make complete sense, this project needs support from the actual programmers! So people, please make games for the board! Or programs, demos, whatever! I think a nice first step would be to port [the original SFX Sounds Expander software](https://csdb.dk/release/?id=155181): I can't say for sure, but I'm guessing this shouldn't be too much of an effort, plus I can help with the tech details and can explain how to make the MIDI decoder, just ask! :)
