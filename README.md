@@ -121,7 +121,7 @@ This documentation is distributed *as is* and WITHOUT ANY EXPRESS OR IMPLIED WAR
 ## Support the Project
 If you want to get some boards manufactured, you can get them from PCBWay through this link:
 
-[![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/SoundX_An_AdLib_card_for_your_Commodore_16_116_4_883d1907.html)
+[![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/SoundX_V2_An_AdLib_card_for_your_Commodore_16_116_4_7110494a.html)
 
 You get my gratitude and cheap, professionally-made and good quality PCBs, I get some credit that will help with this and [other projects](https://www.pcbway.com/project/member/?bmbno=72D33927-5EF6-42). You won't even have to worry about the various PCB options, it's all pre-configured for you!
 
