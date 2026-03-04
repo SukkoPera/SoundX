@@ -10,7 +10,7 @@ While it didn't enjoy much success when it was released on the C64, since it was
 
 - 9 channels of sound, each made of two oscillators or 6 channels with 5 percussion instruments
 
-For the whole channel:
+For every channel:
 - Main frequency (10 bits)
 - Octave (3 bits)
 - Note on/off
@@ -40,9 +40,8 @@ The board can even use the slightly more modern YM3812 (OPL-II): *among its newl
 The original SFX Sound Expander could be bought [together with a piano-like keyboard](http://www.mssiah-forum.com/viewtopic.php?pid=4598#p4598) and some demo software. Such keyboard is not easy to find these days, so it was pointless to replicate the interface for it and I rather decided to build upon my experience with another project and add a real MIDI I/O interface. This means the C16/116/+4 will be able to receive data from a MIDI keyboard or to play it, through a **standard** DIN-5 MIDI interface.
 
 ## Versions
-There are currently two versions of SoundX. Both have the same features and differ only in a few aspects:
-- Version 1 uses a standard ACIA 6551 chip for the MIDI interface. This is available by different manufacturers (MOS, Rockwell, and even new from the Western Design Center!) and requires a 3 MHz crystal to reach the MIDI baudrate. The YM3812 requires an active oscillator either in DIP-8 or DIP-14 size.
-- Version 2 switched to a Motorola MC6850 chip that requires an active oscillator in DIP-8 size, running at either 500 kHz or 2 Mhz (see below). In order to make space for it, the YM3812 oscillator was also restricted to DIP-8 size.
+There are currently two versions of SoundX. Both have the same features and differ only in a few aspects, see below for more details.
+
 
 ## Design and Assembly Notes
 This project makes sense because the YM3812 chip, its companion DAC (YM3014B) and an ACIA chip (for the MIDI part) can all be bought supercheap on AliExpress & similar sites, making this board very affordable to build for everyone. Let's say 15-20€? So get all this stuff second-hand and be happy :).
@@ -53,6 +52,11 @@ The audio output is automatically fed back into the computer through the EXT_AUD
 
 Note that the OPL and MIDI circuits of the board are completely independent from each other, so the board can also be assembled partially if only one of the features is desired. The IBOM points out which feature every components belongs to.
 
+### Version 1
+Version 1 uses a standard ACIA 6551 chip for the MIDI interface. This is available from different manufacturers (MOS, Rockwell, and even [new from the Western Design Center](https://www.westerndesigncenter.com/wdc/w65c51s-chip.php)!) and requires a 3 MHz crystal to reach the MIDI baudrate.
+
+The YM3812 requires an active oscillator either in DIP-8 or DIP-14 size.
+
 There are some solder jumpers on the board:
 - JP1: Close if your oscillator requires pin 1 to be grounded (uncommon).
 - JP2: Close if you want the same signal sent to both channels of the jack connector.
@@ -60,7 +64,9 @@ There are some solder jumpers on the board:
 - JP5: The YM3812 can either go through a 15 kHz low-pass filter (ON) or not (BYPass): normally set to ON.
 
 ### Version 2
-As mentioned above, the MC6850 can use either a 500 kHz or 2 Mhz oscillator. Please set JP7 accordingly. Note that, when using the 500 kHz oscillator, U5 and C12 are not required and can be skipped altogether.
+Version 2 switched the ACIA to a Motorola MC6850 chip that requires an active oscillator in DIP-8 size, running at either 500 kHz or 2 MHz. When using the 500 kHz oscillator, U5 and C12 are not required and can be skipped altogether.
+
+In order to make space for the MC6850 oscillator, the YM3812 oscillator was also restricted to DIP-8 size.
 
 Version 2 features additional jumpers:
 - JP6: Same as JP1 for the MC6850 oscillator.
@@ -81,7 +87,7 @@ The classic ACIA (6551) chip running the MIDI section uses addresses $FDE0/1/2/3
 
 Configure the chip for:
 - No Parity, No Echo, No TX Interrupt, /RTS Low (Unneeded), No RX Interrupt, /DTR Low (Unneeded) &rarr; $0b to Command Register
-- 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250 due to the use of a non-standard crystal) &rarr; $1f to Control Register
+- 0 Stop Bits, 8 Data Bits, Internal Baud Rate Generator, 19200 bps (which will actually result in 31250 due to the use of the non-standard crystal) &rarr; $1f to Control Register
 
 ### MIDI I/O - Version 2
 The MC6850 only has two register, which get mapped at $FDE0/1, which makes me think that this is exactly the same design used by Solder's interface. The software configuration is the same, regardless of what oscillator is installed: configure the chip for No interrupt, /RTS Low (Unneeded), 8 Data bits + 1 Stop bit, No Parity, Clock Divider = 16 (i.e.: $15)
