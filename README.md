@@ -1,4 +1,9 @@
 # SoundX
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/SukkoPera/SoundX)
+![GitHub Release Date](https://img.shields.io/github/release-date/SukkoPera/SoundX?color=blue&label=last%20release)
+![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/SukkoPera/SoundX/latest?color=orange)
+
 SoundX is an Open Hardware sound card for the Commodore 16, 116 and Plus/4 home computers based on the Yamaha OPL/OPL-II chip.
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/SoundX/master/img/render-top.png)
